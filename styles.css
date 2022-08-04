@@ -1,0 +1,270 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* Scrollbar */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #525252 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 18px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #525252;
+    border-radius: 4px;
+    border: 3px solid #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background image that does not move */
+    background: url('https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/06/blackphone_header.jpg?fit=1920%2C1080&quality=50&strip=all&ssl=1') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #FFFFFF;
+}
+
+/* -------- COMMON STYLE FOR HEADER, MAIN AND FOOTER --------*/
+
+#header,
+main,
+footer {
+    /* Dark background */
+    backdrop-filter: brightness(0.5);
+    width: 40%;
+    margin-left: 0.5em;
+}
+
+/* -------- HEADER --------*/
+
+#header {
+    display: inline-block;
+    width: 40%;
+    height: 10vh;
+    margin-left: 0.5em;
+    padding-top: 1em;
+    font-weight: bold;
+}
+
+#nav-bar>ul {
+    display: flex;
+    height: 100%;
+    margin-block: 0;
+    padding-inline-start: 0;
+    justify-content: space-evenly;
+}
+
+#nav-bar>ul>li {
+    display: block;
+    margin: 0 0.2rem;
+}
+
+#nav-bar>ul>li>.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}
+
+#nav-bar>ul>li>.nav-link::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    background-color: #FFFFFF;
+    transition: 0.3s;
+}
+
+#nav-bar>ul>li>.nav-link:hover {
+    color: #FFFFFF;
+}
+
+#nav-bar>ul>li>.nav-link:hover::after {
+    width: 100%;
+}
+
+/* -------- MAIN --------*/
+
+main {
+    padding: 1em 1.5em;
+}
+
+/* Separation between divs */
+div {
+    margin-bottom: 3em;
+}
+
+div:last-of-type {
+    margin-bottom: 0;
+}
+
+#The-Black-Phone h1 {
+    font-size: 83px;
+    font-family: 'Anton', sans-serif;
+}
+
+#Sinopsis p {
+    text-align: justify;
+}
+
+#Trailer>#video-div {
+    position: relative;
+    height: 0;
+    padding-bottom: 300px;
+    overflow: hidden;
+}
+
+#Trailer>#video-div iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+/* Form styles */
+fieldset {
+    border: none;
+}
+
+label {
+    display: block;
+    margin: 1em 0;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-top: 0.5em;
+    font-size: 14px;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: inherit;
+    border: none;
+    border-bottom: 2px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+input::placeholder {
+    padding-left: 0.5em;
+}
+
+input {
+    height: 2.25em;
+}
+
+textarea {
+    height: 5em;
+    resize: none;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 25%;
+    height: 2em;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    border: none;
+    color: #000000;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:active {
+    cursor: pointer;
+}
+
+/* -------- FOOTER --------*/
+
+footer {
+    padding: 1em 1.5em;
+}
+
+footer p {
+    text-align: center;
+}
+
+hr {
+    margin: 0.5em 0;
+    border: none;
+}
+
+footer>address {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    align-items: center;
+}
+
+footer>address>a {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* Media queries */
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    #header,
+    main,
+    footer {
+        width: 50%;
+    }
+
+    #The-Black-Phone h1 {
+        font-size: 55px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    #header,
+    main,
+    footer {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    #header,
+    main,
+    footer {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+
+    #header,
+    main,
+    footer {
+        width: 90%;
+    }
+}
